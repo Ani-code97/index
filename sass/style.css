@@ -1,0 +1,258 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+  height: auto;
+}
+
+#myfnav {
+  position: fixed;
+  height: 100px;
+  width: 100vw;
+  -webkit-box-shadow: 5px 0 20px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 5px 0 20px 10px rgba(0, 0, 0, 0.2);
+  z-index: 255481447;
+  background: #ffffff;
+  opacity: 0.9;
+}
+
+#myfnav .logo {
+  position: absolute;
+  font-size: 2.3rem;
+  left: 80px;
+  line-height: 100px;
+  font-family: "Krona One", sans-serif;
+  color: #3498db;
+  pointer-events: none;
+}
+
+#myfnav nav {
+  position: absolute;
+  width: auto;
+  height: 100px;
+  right: 20px;
+  line-height: 100px;
+}
+
+#myfnav nav ul {
+  width: 100%;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#myfnav nav ul .active {
+  color: black;
+  text-decoration: overline;
+}
+
+#myfnav nav ul li {
+  margin: 0 14px;
+  list-style: none;
+  font-size: 1.3rem;
+}
+
+#myfnav nav ul li a {
+  position: relative;
+  text-decoration: none;
+  color: grey;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 300;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  padding: 5px 0;
+}
+
+#myfnav nav ul li a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  bottom: 0;
+  height: 2px;
+  background: grey;
+  left: 50%;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+#myfnav nav ul li a:hover {
+  color: #4e4d4d;
+}
+
+#myfnav nav ul li a:hover::after {
+  left: 0;
+  width: 100%;
+}
+
+#myfcar {
+  position: relative;
+  height: 557px;
+  width: 100vw;
+  top: 100px;
+  overflow: hidden;
+}
+
+#myfcar img {
+  width: 100%;
+  height: 80%;
+  background-size: 100% 100%;
+}
+
+#myfcar .carousel-caption {
+  position: absolute;
+  top: 180px;
+  left: 130px;
+}
+
+#myfcar .carousel-caption h1 {
+  position: absolute;
+  padding: 10px 0;
+  font-family: "Red Rose", cursive;
+}
+
+#myfcar .carousel-caption h1::before {
+  content: "";
+  position: absolute;
+  background: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(white), to(transparent));
+  background: linear-gradient(to right, transparent, white, transparent);
+  top: 0;
+  width: 100%;
+  height: 5px;
+  left: 0;
+}
+
+#myfcar .carousel-caption h1::after {
+  content: "";
+  position: absolute;
+  background: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(white), to(transparent));
+  background: linear-gradient(to right, transparent, white, transparent);
+  bottom: 0;
+  width: 100%;
+  height: 5px;
+  left: 0;
+}
+
+#about_us {
+  position: relative;
+  margin-top: 150px;
+}
+
+#about_us h1 {
+  margin-top: 50px;
+}
+
+#about_us p {
+  margin-top: 70px;
+}
+
+#our_team {
+  position: relative;
+}
+
+#our_team h1 {
+  margin-top: 70px;
+}
+
+#our_team .team-card {
+  position: absolute;
+  height: 400px;
+  width: 250px;
+  margin-top: 80px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  border-radius: 20px;
+}
+
+#our_team .team-card .card-front {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  cursor: pointer;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+#our_team .team-card .card-front img {
+  height: 100%;
+  width: 100%;
+}
+
+#our_team .team-card .card-back {
+  position: absolute;
+  background: #555555;
+  height: 100%;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transition: 1s;
+  transition: 1s;
+  color: white;
+}
+
+#our_team .team-card .card-back p {
+  position: relative;
+  padding: 7px 0;
+  margin-top: 10px;
+}
+
+#our_team .team-card .card-back p::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background: grey;
+  left: 0;
+  top: 0;
+}
+
+#our_team .team-card:hover .card-front {
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+
+#our_team .team-card:hover .card-back {
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+}
+
+#our_team .counter {
+  position: absolute;
+  margin-top: 600px;
+}
+
+#our_team .counter .icon {
+  background: #3498db;
+  color: white;
+  padding: 13px;
+  border-radius: 50%;
+}
+
+#our_team .counter .counter-name {
+  padding: 10px;
+  border-radius: 50px;
+  -webkit-box-shadow: 10px 10px 20px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 10px 10px 20px 5px rgba(0, 0, 0, 0.2);
+}
+/*# sourceMappingURL=style.css.map */
