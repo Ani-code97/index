@@ -60,7 +60,7 @@ body {
 
 #myfnav nav ul .active {
   color: black;
-  text-decoration: overline;
+  text-decoration: underline;
 }
 
 #myfnav nav ul li {
