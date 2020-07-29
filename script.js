@@ -7,7 +7,7 @@ window.addEventListener("scroll", function () {
   let down_link = document.getElementById("down_link");
   let contact_link = document.getElementById("contact_link");
   if (scroll < 605) {
-    home_link.style.color = "black";
+    home_link.classList.add = "active";
   }
   if (scroll < 755 && scroll > 557) {
     about_link.classList.toggle = "active";
