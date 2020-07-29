@@ -42,7 +42,7 @@
             <li><a id="about_link" href="#about_us">About us</a></li>
             <li><a id="team_link" href="#our_team">Our Team</a></li>
             <li><a id="down_link" href="#">Downloads & other</a></li>
-            <li><a id="contact_link" href="#">Contact us</a></li>
+            <li><a id="contact_link" href="#contact">Contact us</a></li>
           </ul>
         </nav>
       </section>
@@ -201,37 +201,100 @@
           </div>
         </div>
         <h1>
-          <div class="row">
-            <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
-              <div class="counter" id="counter1">
-                <span class="counter-name">
-                  <span class="icon"
-                    ><i class="fas fa-chalkboard-teacher"></i
-                  ></span>
-                  Teachers: <span id="count">0</span></span
-                >
-              </div>
-            </div>
-            <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
-              <div class="counter" id="counter2">
-                <span class="counter-name">
-                  <span class="icon"
-                    ><i class="fas fa-graduation-cap"></i
-                  ></span>
-                  Students: <span id="count">0</span>
-                </span>
-              </div>
-            </div>
-            <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
-              <div class="counter" id="counter3">
-                <span class="counter-name">
-                  <span class="icon"><i class="fas fa-broom"></i></span>
-                  Staffs: <span id="count">0</span>
-                </span>
-              </div>
-            </div>
+          <div class="counter" id="counter1">
+            <span class="counter-name">
+              <span class="icon"
+                ><i class="fas fa-chalkboard-teacher"></i
+              ></span>
+              Teachers: <span id="count">0</span></span
+            >
+          </div>
+          <div class="counter" id="counter2">
+            <span class="counter-name">
+              <span class="icon"><i class="fas fa-graduation-cap"></i></span>
+              Students: <span id="count">0</span>
+            </span>
+          </div>
+          <div class="counter" id="counter3">
+            <span class="counter-name">
+              <span class="icon"><i class="fas fa-broom"></i></span>
+              Staffs: <span id="count">0</span>
+            </span>
           </div>
         </h1>
+      </div>
+    </div>
+    <div id="contact">
+      <h1 class="text-center">Get in touch</h1>
+      <div class="container">
+        <div id="personal-profile">
+          <h4 class="text-center">Don't be a stranger</h4>
+          <i class="icon fas fa-map fa-2x"></i>&nbsp;&nbsp;&nbsp;Kankarbagh,
+          Patna, Bihar, India <br /><br />
+          <i class="icon fas fa-phone fa-2x"></i>&nbsp;&nbsp;&nbsp;9204613799,
+          9973860205 <br /><br />
+          <i class="icon fab fa-telegram-plane fa-2x"></i
+          >&nbsp;&nbsp;&nbsp;Rajeshwar9204@gmail.com
+        </div>
+        <div class="form">
+          <h3 class="text-center">Enter your details here:</h3>
+          <form action="db.php" method="POST">
+            <div class="form-group" onsubmit="validation()">
+              <label for="username">Enter your name: </label>
+              <input
+                type="text"
+                name="username"
+                id="username"
+                class="form-control"
+                placeholder="Please Enter your name here"
+                aria-describedby="user-valid"
+              />
+              <small id="user-valid" class="text-danger"></small>
+            </div>
+            <div class="form-group">
+              <label for="email">Enter your e-mail :</label>
+              <input
+                type="email"
+                class="form-control"
+                name="email"
+                id="email"
+                aria-describedby="email-validate"
+                placeholder="ex@gmail.com"
+              />
+              <small id="email-valid" class="form-text text-danger"></small>
+            </div>
+            <div class="form-group">
+              <label for="password">Password :</label>
+              <input
+                type="password"
+                class="form-control"
+                name="password"
+                aria-describedby="pass-valid"
+                id="password"
+              />
+              <small id="pass-valid" class="form-text text-danger"></small>
+            </div>
+            <div class="form-group">
+              <label for="message">Drop your message:</label>
+              <textarea
+                class="form-control"
+                name="message"
+                id="message"
+                rows="10"
+                placeholder="Feedback | Wish | Problem etc..."
+                aria-describedby="textarea"
+              ></textarea>
+              <small id="textarea" class="form-text text-danger"></small>
+            </div>
+            <button
+              type="submit"
+              onsubmit="validation()"
+              class="btn btn-success"
+            >
+              Submit
+            </button>
+          </form>
+        </div>
       </div>
     </div>
     <!-- Custom js -->

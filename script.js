@@ -1,15 +1,21 @@
 window.addEventListener("scroll", function () {
   let scroll = scrollY;
-  console.log(scroll);
-  let home_link = document.getElementById("home_link");
-  let about_link = document.getElementById("about_link");
-  let team_link = document.getElementById("team_link");
-  let down_link = document.getElementById("down_link");
-  let contact_link = document.getElementById("contact_link");
-  if (scroll < 605) {
-    home_link.classList.add = "active";
-  }
-  if (scroll < 755 && scroll > 557) {
-    about_link.classList.toggle = "active";
+  // console.log(scroll);
+  function validation() {
+    let username = document.getElementById("username").value;
+    let uservalid = document.getElementById("user-valid");
+    let email = document.getElementById("email").value;
+    let emailvalid = document.getElementById("email-valid");
+    let password = document.getElementById("password").value;
+    let passvalid = document.getElementById("pass-valid");
+    if (username == "") {
+      uservalid.innerHTML = "This filled is neccesary";
+      return false;
+    } else if (email == "") {
+      email.innerHTML = "This filled is neccesary";
+      return false;
+    } else if (email.indexOf("@") <= 0) {
+      emailvalid.innerHTML = "The position of '@' is invalid or is not entered";
+    }
   }
 });
