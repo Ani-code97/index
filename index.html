@@ -41,7 +41,17 @@
             <li><a id="home_link" href="#">Home</a></li>
             <li><a id="about_link" href="#about_us">About us</a></li>
             <li><a id="team_link" href="#our_team">Our Team</a></li>
-            <li><a id="down_link" href="#">Downloads & other</a></li>
+            <li>
+              <a href="#" id="down_link"
+                >Downloads & other &nbsp;<i class="fas fa-caret-down"></i
+              ></a>
+              <ul>
+                <li><a href="#">Syllabus</a></li>
+                <li><a href="#">Holiday Homework</a></li>
+                <hr />
+                <li><a href="#">Admission Enquiery</a></li>
+              </ul>
+            </li>
             <li><a id="contact_link" href="#contact">Contact us</a></li>
           </ul>
         </nav>
@@ -238,7 +248,7 @@
         </div>
         <div class="form">
           <h3 class="text-center">Enter your details here:</h3>
-          <form action="db.php" method="POST">
+          <form action="#" method="POST">
             <div class="form-group" onsubmit="validation()">
               <label for="username">Enter your name: </label>
               <input
@@ -286,13 +296,10 @@
               ></textarea>
               <small id="textarea" class="form-text text-danger"></small>
             </div>
-            <button
-              type="submit"
-              onsubmit="validation()"
-              class="btn btn-success"
-            >
-              Submit
-            </button>
+            <div class="justify-content-center">
+              <input type="submit" value="Submit" class="btn btn-success" />
+              <input class="btn btn-danger" type="reset" value="Reset" />
+            </div>
           </form>
         </div>
       </div>
